@@ -1,5 +1,4 @@
 import json
-from ntpath import join
 import requests
 import os
 from PIL import Image
