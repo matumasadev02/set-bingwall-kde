@@ -15,7 +15,15 @@ def main():
 
     img_name = data.get('images')[0].get('title') + '.jpg'
 
-    img_path = os.path.join(os.path.dirname(__file__), 'images', img_name)
+    current_dir = os.path.dirname(__file__)
+
+    img_path = os.path.join(current_dir, 'images', img_name)
+
+    if os.path.exists(os.path.join(current_dir, 'images')):
+        pass
+
+    else:
+        os.mkdir(os.path.join(current_dir, 'images'))
 
     if os.path.exists(img_path):
         pass
